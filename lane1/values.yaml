@@ -84,7 +84,11 @@ affinity:
     requiredDuringSchedulingIgnoredDuringExecution:
       - nodeSelectorTerms:
           matchExpressions:
-            - key: node_id
+            - key: lane
               operator: In
               values:
-                - node1
+                - lane01
+           # - key: node_id
+           #   operator: In
+           #   values:
+           #     - node01
