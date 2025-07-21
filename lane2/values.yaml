@@ -81,3 +81,10 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+topologySpreadConstraints:
+  - maxSkew: 1
+    topologyKey: lane
+    whenUnsatisfiable: DoNotSchedule
+    labelSelector:
+      matchLabels:
+        app: app2
