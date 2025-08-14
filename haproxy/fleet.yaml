@@ -8,6 +8,7 @@ helm:
     controller:
       haproxy:
         enabled: true
+        hostNetwork: true
       ingressClassResource:
         default: true
         enabled: true
