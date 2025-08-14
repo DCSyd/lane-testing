@@ -6,6 +6,9 @@ helm:
   version: "0.14.8"
   values: 
     controller:
+      kind: Daemonset
+      daemonset:
+        useHostPort: true
       haproxy:
         enabled: true
         securityContext:
@@ -18,4 +21,4 @@ helm:
       service:
         type: ClusterIP
 #        type: Loadbalancer
-#Better to use Loadbalancer 
+#Better to use Loadbalancer and Kind Deployment
