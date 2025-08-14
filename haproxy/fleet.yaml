@@ -6,9 +6,9 @@ helm:
   version: "0.14.8"
   values: 
     controller:
-      kind: Daemonset
-      daemonset:
-        useHostPort: true
+      kind: Deployment
+#      daemonset:
+#        useHostPort: true
       haproxy:
         enabled: true
         securityContext:
