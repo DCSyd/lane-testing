@@ -6,5 +6,8 @@ helm:
   version: "0.14.8"
   values: 
     controller:
+      ingressClassResource:
+        default: true
+        enabled: true
       service:
         type: ClusterIP
