@@ -6,9 +6,9 @@ helm:
   version: "0.14.8"
   values: 
     controller:
+      hostNetwork: true
       haproxy:
         enabled: true
-        hostNetwork: true
       ingressClassResource:
         default: true
         enabled: true
