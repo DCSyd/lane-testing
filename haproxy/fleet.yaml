@@ -4,3 +4,7 @@ helm:
   chart: haproxy-ingress
   repo: https://haproxy-ingress.github.io/charts
   version: "0.14.8"
+  values: 
+    controller:
+      service:
+        type: ClusterIP
