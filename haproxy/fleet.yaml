@@ -7,8 +7,8 @@ helm:
   values: 
     controller:
       kind: Deployment
-#      daemonset:
-#        useHostPort: true
+      daemonset:
+        useHostPort: true
       haproxy:
         enabled: true
         securityContext:
