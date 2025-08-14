@@ -1,0 +1,6 @@
+defaultNamespace: haproxy-ingress
+helm:
+  releaseName: haproxy-ingress
+  chart: haproxy-ingress
+  repo: https://haproxy-ingress.github.io/charts
+  version: "0.14.8"
