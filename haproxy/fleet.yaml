@@ -8,14 +8,14 @@ helm:
     controller:
       haproxy:
         enabled: true
+        securityContext:
+          capabilities:
+            add:
+              - NET_BIND_SERVICE
       ingressClassResource:
         default: true
         enabled: true
       service:
         type: ClusterIP
-#Either Loadbalancer or below
-      hostNetwork: true
-      securityContext:
-        capabilities:
-          add:
-            - NET_BIND_SERVICE
+#        type: Loadbalancer
+#Better to use Loadbalancer 
