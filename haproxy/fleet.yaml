@@ -6,7 +6,6 @@ helm:
   version: "0.14.8"
   values: 
     controller:
-      hostNetwork: true
       haproxy:
         enabled: true
       ingressClassResource:
@@ -14,3 +13,9 @@ helm:
         enabled: true
       service:
         type: ClusterIP
+#Either Loadbalancer or below
+      hostNetwork: true
+      securityContext:
+        capabilities:
+          add:
+            - NET_BIND_SERVICE
